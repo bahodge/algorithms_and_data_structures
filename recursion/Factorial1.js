@@ -9,3 +9,4 @@ const factorial = num => {
 };
 
 factorial(10);
+factorial(50);

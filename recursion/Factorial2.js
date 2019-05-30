@@ -6,3 +6,4 @@ const factorial = n => {
 };
 
 console.log(factorial(10));
+console.log(factorial(50));
