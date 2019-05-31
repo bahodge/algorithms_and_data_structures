@@ -1,8 +1,11 @@
 "use strict";
 
-const array1 = [5, 3, 4, 1, 2];
+const array1 = [0, 1, 5, 3, 4, 1, 2];
 
 const selectionSort = arr => {
+  const swap = (arr, idx1, idx2) =>
+    ([arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]);
+
   for (let i = 0; i < arr.length; i++) {
     let lowest = i;
     for (let j = i + 1; j < arr.length; j++) {
@@ -10,11 +13,7 @@ const selectionSort = arr => {
         lowest = j;
       }
     }
-    if (i !== lowest) {
-      let temp = arr[i];
-      arr[i] = arr[lowest];
-      arr[lowest] = temp;
-    }
+    if (i !== lowest) swap(arr, i, lowest);
   }
 
   return arr;
