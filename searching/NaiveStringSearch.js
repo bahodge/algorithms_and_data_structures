@@ -14,4 +14,4 @@ const naiveStringSearch = (long, short) => {
   return count;
 };
 
-console.log(naiveStringSearch(string, "lol"));
+console.log(naiveStringSearch(string, "lo"));

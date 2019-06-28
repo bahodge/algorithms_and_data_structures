@@ -1,27 +1,6 @@
 "use strict";
 
-const values = [
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16,
-  17,
-  18,
-  19,
-  20
-];
+const list = [...Array(20).keys()];
 
 const binarySearch = (arr, elem) => {
   let start = 0;
@@ -38,5 +17,5 @@ const binarySearch = (arr, elem) => {
   return arr[middle] === elem ? middle : -1;
 };
 
-console.log(binarySearch(values, 13));
-console.log(binarySearch(values, 2));
+console.log(binarySearch(list, 13));
+console.log(binarySearch(list, 2));
