@@ -1,4 +1,3 @@
-
 def insertion_sort(arr)
   sorted_array = []
   # populate the array with the first item
