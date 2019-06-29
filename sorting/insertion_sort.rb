@@ -2,8 +2,8 @@ def insertion_sort(arr)
   sorted_array = []
   # populate the array with the first item
   sorted_array << arr.shift
-  #loop over the unordered array
-  arr.each do |item| 
+  # loop over the unordered array
+  arr.each do |item|
     idx = 0
     # stay on this unordered item until the end of the sorted array
     while idx < sorted_array.length
@@ -24,8 +24,8 @@ def insertion_sort(arr)
   sorted_array
 end
 
-arr_1 = [3, 2, 4, 6, 1, 8, 1 , 12]
-arr_2 = [1,5,1,2]
+arr_1 = [3, 2, 4, 6, 1, 8, 1, 12]
+arr_2 = [1, 5, 1, 2]
 
 p insertion_sort(arr_1)
 p insertion_sort(arr_2)

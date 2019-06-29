@@ -1,5 +1,3 @@
-const list = [3, 2, 6, 4, 1];
-
 const insertionSort = arr => {
   console.log("Sorting: ", arr);
   for (var i = 1; i < arr.length; i++) {
@@ -12,5 +10,8 @@ const insertionSort = arr => {
   return arr;
 };
 
-// This uses a clojure
-console.log(insertionSort(list));
+const list1 = [1, 60, 3, 35, 20];
+const list2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267];
+
+console.log(insertionSort(list1));
+console.log(insertionSort(list2));
