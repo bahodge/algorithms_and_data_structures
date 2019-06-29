@@ -4,38 +4,41 @@ const mergeSort = array => {
   return merge(mergeSort(array.slice(0, mid)), mergeSort(array.slice(mid)));
 };
 
-const merge = (array1, array2) => {
+const merge = (left, right) => {
   let results = [];
   let i = 0;
   let j = 0;
 
-  while (i < array1.length && j < array2.length) {
-    if (array2[j] > array1[i]) {
-      results.push(array1[i]);
+  while (i < left.length && j < right.length) {
+    if (right[j] > left[i]) {
+      results.push(left[i]);
       i++;
     } else {
-      results.push(array2[j]);
+      results.push(right[j]);
       j++;
     }
   }
-  while (i < array1.length) {
-    results.push(array1[i]);
+  while (i < left.length) {
+    results.push(left[i]);
     i++;
   }
-  while (j < array2.length) {
-    results.push(array2[j]);
+  while (j < right.length) {
+    results.push(right[j]);
     j++;
   }
   return results;
 };
 
-const list1 = [1, 60, 3, 35, 20];
-const list2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267];
+const array1 = Array.from({ length: 100 }, () =>
+  Math.floor(Math.random() * 100)
+);
 
-console.log(mergeSort(list1));
-console.log(mergeSort(list2));
+const array2 = Array.from({ length: 100 }, () =>
+  Math.floor(Math.random() * 100)
+);
 
-// const sortedArray1 = [1, 3, 5];
-// const sortedArray2 = [2, 4, 6];
+// const list1 = [1, 60, 3, 35, 20];
+// const list2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267];
 
-// console.log(merge(sortedArray1, sortedArray2));
+console.log(mergeSort(array1));
+console.log(mergeSort(array2));

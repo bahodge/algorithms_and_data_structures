@@ -34,13 +34,12 @@ def merge(array_1, array_2)
   results
 end
 
-list_1 = [1, 60, 3, 35, 20];
-list_2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267];
 
-p merge_sort(list_1)
-p merge_sort(list_2)
+array_1 = (0..100).map {|x| rand(0..100)}
+array_2 = (0..100).map {|x| rand(0..100)}
 
-# sorted_array_1 = [1, 3, 5];
-# sorted_array_2 = [2, 4, 6, 7];
+# array_1 = [1, 60, 3, 35, 20];
+# array_2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267];
 
-# p merge(sorted_array_1, sorted_array_2)
+p merge_sort(array_1)
+p merge_sort(array_2)

@@ -1,17 +1,25 @@
-const insertionSort = arr => {
-  console.log("Sorting: ", arr);
-  for (var i = 1; i < arr.length; i++) {
-    var currentValue = arr[i];
-    for (var j = i - 1; j >= 0 && arr[j] > currentValue; j--) {
-      arr[j + 1] = arr[j];
+const insertionSort = array => {
+  console.log("Sorting: ", array);
+  for (var i = 1; i < array.length; i++) {
+    var currentValue = array[i];
+    for (var j = i - 1; j >= 0 && array[j] > currentValue; j--) {
+      array[j + 1] = array[j];
     }
-    arr[j + 1] = currentValue;
+    array[j + 1] = currentValue;
   }
-  return arr;
+  return array;
 };
 
-const list1 = [1, 60, 3, 35, 20];
-const list2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267];
+const array1 = Array.from({ length: 100 }, () =>
+  Math.floor(Math.random() * 100)
+);
 
-console.log(insertionSort(list1));
-console.log(insertionSort(list2));
+const array2 = Array.from({ length: 100 }, () =>
+  Math.floor(Math.random() * 100)
+);
+
+// const array1 = [1, 60, 3, 35, 20];
+// const array2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267];
+
+console.log(insertionSort(array1));
+console.log(insertionSort(array2));
