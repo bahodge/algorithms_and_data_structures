@@ -22,11 +22,12 @@ defmodule BubbleSort do
   end
 end
 
-list_1 = Enum.map(0..100, fn _ -> Enum.random(1..100) end)
-list_2 = Enum.map(0..100, fn _ -> Enum.random(1..100) end)
-
-# list_1 = [1, 60, 3, 35, 20]
-# list_2 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267]
+list_1 = Enum.map(0..10, fn _ -> Enum.random(1..100) end)
+list_2 = Enum.map(0..15, fn _ -> Enum.random(1..100) end)
+list_3 = [1, 60, 3, 35, 20]
+list_4 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267]
 
 IO.inspect(BubbleSort.sort(list_1))
 IO.inspect(BubbleSort.sort(list_2))
+IO.inspect(BubbleSort.sort(list_3))
+IO.inspect(BubbleSort.sort(list_4))

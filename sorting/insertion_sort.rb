@@ -1,4 +1,4 @@
-def insertion_sort(array)
+def sort(array)
   sorted_array = []
   # populate the array with the first item
   sorted_array << array.shift
@@ -24,8 +24,13 @@ def insertion_sort(array)
   sorted_array
 end
 
-array_1 = (0..100).map {|x| rand(0..100)}
-array_2 = (0..100).map {|x| rand(0..100)}
+array_1 = (0..10).map {|x| rand(0..100)}
+array_2 = (0..15).map {|x| rand(0..100)}
+array_3 = [1, 60, 3, 35, 20];
+array_4 = [2, 32, 6, 35, 29, 16, 78, 332, 325, 122, 5, 56, 6, 15, 267]
 
-p insertion_sort(array_1)
-p insertion_sort(array_2)
+p sort(array_1)
+p sort(array_2)
+p sort(array_3)
+p sort(array_4)
+
